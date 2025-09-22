@@ -9,7 +9,7 @@ let products =
 
 
 // STEP 3
-    for (let product in products) {
+    for (let product of products) {
     let discount;
     
     switch (product.category) {
@@ -30,20 +30,20 @@ let products =
 
 // STEP 4
 let customerType = ['Student', 'Senior']
-console.log(customerType);
 
 let subtotal
-if (customerType = 'Student') {
+if (customerType === 'Student') {
   subtotal = subtotal - (subtotal * .05);
 } else {
     console.log(`Student Discount does not apply to order. Your order total is: ${subtotal}`);
 }
 
-if (customerType = 'Senior') {
+if (customerType === 'Senior') {
   subtotal = subtotal - (subtotal * .07);    
 } else {
     console.log(`Senior Discount does not apply to order. Your order total is: ${subtotal}`);
 }
+console.log(customerType === 'Student');
 
 
 // STEP 5
@@ -52,8 +52,19 @@ let customers =
     {customerID: 2, customerType: 'Student', cart: [{name: 'Red Leggings', qty: 1}, {name: 'Crop Top', qty: 1}]},
     {customerID: 3, customerType: 'Senior', cart: [{name: 'Avocados', qty: 6}, {name: 'iPad Air', qty: 1}]},]
 
-subtotal = 0;
-for (let customer = 0; customer <= 3; customer++) {
-    const element = array[index];
-    
+
+for (let customer of customers){
+    for (let item of customer.cart){
+        let product = products.find(products => products.name === item.name)}
+        if (product && product.inventory >= item.qty) {}
+
+        let discount = 0
+        
+}
+
+
+// Step 7
+console.log('This is the Updated Inventory: ');
+for (const products of Object.entries(products)) {
+  console.log(`Name: ${products.name}`, ` | Category: ${products.category}`, ` | Price: $${products.price}`, ` | Inventory: ${products.inventory}`);
 }
