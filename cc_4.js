@@ -2,10 +2,10 @@
 
 // STEP 2
 let products =
-    [{name: "iPad Air", category: "Electronics", price: 399.99, inventory: 200},
-    {name: "Crop Top", category: "Apparel", price: 19.72, inventory: 30},
-    {name: "Avocados", category: "Groceries", price: 3.99, inventory: 50},
-    {name: "Red Leggings", category: "Apparel", price: 8.50, inventory: 15}]
+    [{name: 'iPad Air', category: 'Electronics', price: 399.99, inventory: 200},
+    {name: 'Crop Top', category: 'Apparel', price: 19.72, inventory: 30},
+    {name: 'Avocados', category: 'Groceries', price: 3.99, inventory: 50},
+    {name: 'Red Leggings', category: 'Apparel', price: 8.50, inventory: 15}]
 
 
 // STEP 3
@@ -47,8 +47,13 @@ if (customerType = 'Senior') {
 
 
 // STEP 5
-let customerCarts = [{cartID: I-13,}];
+let customers =
+    [{customerID: 1, customerType: 'Student', cart:[{name: 'iPad Air', qty: 1}, {name: 'Red Leggings', qty: 2}]},
+    {customerID: 2, customerType: 'Student', cart: [{name: 'Red Leggings', qty: 1}, {name: 'Crop Top', qty: 1}]},
+    {customerID: 3, customerType: 'Senior', cart: [{name: 'Avocados', qty: 6}, {name: 'iPad Air', qty: 1}]},]
 
-for (const color of colors) {
-  console.log(color);
+subtotal = 0;
+for (let customer = 0; customer <= 3; customer++) {
+    const element = array[index];
+    
 }
